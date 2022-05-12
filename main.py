@@ -1,6 +1,5 @@
 import networkx as nx
 import numpy as np
-#import pylab as plt
 import matplotlib.pyplot as plt
 import scipy.sparse as sp
 import math
