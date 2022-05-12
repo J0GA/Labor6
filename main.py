@@ -11,13 +11,13 @@ n=6
 D = [[] for i in range(n)] # "объявляет" матрицу(двумерный массив)
 with open('m.txt') as file:
     for i in range(n):
-        D[i] = [int(t) for t in file.readline().split()] #читает всю строку, делит по пробелам, и сохраняет как массив интов записывая в строку матрицы
+        D[i] = [int(t) for t in file.readline().split()] # читает всю строку, делит по пробелам, и сохраняет как массив интов записывая в строку матрицы
 
 Matrix = np.array(D)
 def get_matrix_triad(coo_matrix):
 	if not sp.isspmatrix_coo(coo_matrix):
 		coo_matrix = sp.coo_matrix(coo_matrix)
-	temp = np.vstack((coo_matrix.row , coo_matrix.col , coo_matrix.data)).transpose()
+	temp = np.vstack((coo_matrix.row, coo_matrix.col, coo_matrix.data)).transpose()
 	return temp.tolist()
 edags = get_matrix_triad(Matrix)
 print(edags)
@@ -47,7 +47,7 @@ n=6
 D = [[] for i in range(n)] # "объявляет" матрицу(двумерный массив)
 with open('m.txt') as file:
     for i in range(n):
-        D[i] = [int(t) for t in file.readline().split()] #читает всю строку, делит по пробелам, и сохраняет как массив интов записывая в строку матрицы
+        D[i] = [int(t) for t in file.readline().split()] # читает всю строку, делит по пробелам, и сохраняет как массив интов записывая в строку матрицы
 N = len(D)  # число вершин в графе
 T = [math.inf]*N   # последняя строка таблицы
 v = 0       # стартовая вершина (нумерация с нуля)
